@@ -2,6 +2,10 @@
 
 Forkify is a single-page recipe application that lets you search thousands of recipes, view detailed cooking instructions, adjust servings, bookmark favorites, and even upload your own recipes. This version has been modernized with a minimalist UI, dark mode support, and a clean ES6+ codebase.
 
+![Forkify screenshot](src/img/forkify-screenshot.png)
+
+**Live Demo:** https://ahafez-forkify.netlify.app/
+
 ---
 
 ### Key Features
