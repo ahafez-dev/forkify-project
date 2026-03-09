@@ -1,0 +1,95 @@
+// Core palette (used to derive CSS variables for theming)
+// $color-primary: #f59a83;
+$color-primary: #f38e82;
+$color-grad-1: #fbdb89;
+$color-grad-2: #f48982;
+
+$color-grey-light-1: #f9f5f3; // Light background
+$color-grey-light-2: #f2efee; // Light lines
+$color-grey-light-3: #d3c7c3; // Light text (placeholder)
+$color-grey-dark-1: #1f2933; // Normal text (slightly darker for contrast)
+$color-grey-dark-2: #6b7280; // Lighter text
+
+$gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
+
+// Modern, minimalist theme using CSS variables for light/dark modes
+:root {
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-border-subtle: rgba(15, 23, 42, 0.08);
+  --color-app-bg: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f9fafb;
+  --color-accent: #f97362;
+  --color-accent-soft: #fee2e2;
+  --color-shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+body.theme-dark {
+  --color-text: #e5e7eb;
+  --color-text-muted: #9ca3af;
+  --color-border-subtle: rgba(148, 163, 184, 0.25);
+  --color-app-bg: #020617;
+  --color-surface: #020617;
+  --color-surface-muted: #020617;
+  --color-accent: #fb7185;
+  --color-accent-soft: rgba(248, 113, 113, 0.15);
+  --color-shadow-soft: 0 28px 80px rgba(15, 23, 42, 0.7);
+}
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-app-bg);
+  min-height: calc(100vh - 2 * 4vw);
+}
+
+.container {
+  max-width: 120rem;
+  min-height: 117rem;
+  margin: 4vw auto;
+  background-color: var(--color-surface);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: var(--color-shadow-soft);
+
+  display: grid;
+  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    'head head'
+    'list recipe';
+
+  @media only screen and (max-width: $bp-large) {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
