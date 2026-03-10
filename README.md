@@ -1,5 +1,9 @@
 ## Forkify – Modern Recipe Finder & Manager
 
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=000)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
 Forkify is a single-page recipe application that lets you search thousands of recipes, view detailed cooking instructions, adjust servings, bookmark favorites, and even upload your own recipes. This version has been modernized with a minimalist UI, dark mode support, and a clean ES6+ codebase.
 
 ![Forkify screenshot](src/img/forkify-screenshot.png)
